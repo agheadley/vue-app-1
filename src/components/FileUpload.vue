@@ -23,7 +23,7 @@ export default {
   data() {
       return {
           file:"",
-          message:""
+          message:__dirname
       }
   },
   methods: {
@@ -33,15 +33,7 @@ export default {
           fs.readFile(this.file);
           fs.writeFile('test.txt','blah, blah, blah!');
       },
-      /*
-      onSubmit() {
-          const formData=new FormData();
-          formData.append('file',this.file);
-          console.log(this.file);
-          console.log(this.file.type);
-          fileAPI.readFile(this.file);
-      }
-      */
+     
 
   }
 }

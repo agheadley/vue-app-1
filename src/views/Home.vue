@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p>Home.vue (Route: /)</p>
+        <p>xxx - Home.vue (Route: /)</p>
         <button @click="onClickGo">Go to /mongo</button>
          <button @click="onClickFile">Go to /file</button>
     

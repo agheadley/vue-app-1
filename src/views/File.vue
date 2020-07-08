@@ -5,9 +5,15 @@
     
         <p>{{ message }}</p>
 
+         <p> Now for the upload </p>
+        <FileUpload></FileUpload>
+  
 
-        <FileUpload/>
+        <!--<FileUpload/> -->
+        <p> Now for the download </p>
+        <FileDownload></FileDownload>
 
+        
       
     
     
@@ -17,11 +23,13 @@
 <script>
 
   import FileUpload from '../components/FileUpload.vue'
+  import FileDownload from '../components/FileDownload.vue'
 
   export default {
     name: 'File',
     components: {
-        FileUpload
+        'FileUpload':FileUpload,
+        'FileDownload':FileDownload
     },
     data:function () {
       return {

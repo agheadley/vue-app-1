@@ -42,4 +42,19 @@ function writeFile(filename,text) {
   });
 }
 
-export {readFile,writeFile}
+
+function downloadFile(filename, text,parentElement) {
+  var element = document.createElement('a');
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+  element.setAttribute('download', filename);
+
+  element.style.display = 'none';
+  console.log('here');
+  parentElement.appendChild(element);
+
+  element.click();
+
+  parentElement.removeChild(element);
+}
+
+export {readFile,writeFile,downloadFile}
