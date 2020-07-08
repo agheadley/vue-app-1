@@ -11,9 +11,16 @@ export default new Router({
       component: require('./views/Home').default
     },
     {
-      path: '/hello',
-      name: 'Hello',
-      component: require('./views/Hello').default
+      path: '/mongo',
+      name: 'Mongo',
+      component: require('./views/Mongo').default
     },
+    {
+      path: '/file',
+      name: 'File',
+      component: require('./views/File').default
+    },
+  
+
   ]
 })
