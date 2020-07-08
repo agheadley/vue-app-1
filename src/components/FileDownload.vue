@@ -10,6 +10,7 @@
 <script>
 
 import * as fs from './../scripts/fs'
+import * as state from './../scripts/state'
 
 export default {
   name: 'FileDownload',
@@ -22,14 +23,9 @@ export default {
   },
 
   methods: {
-      onSelect(){
-          this.file=this.$refs.file.files[0];
-          console.log(this.file);
-          fs.readFile(this.file);
-          fs.writeFile('test.txt','blah, blah, blah!');
-      },
       initDownload() {
-          fs.downloadFile('test.text','blahdeblah',document.getElementById('download-link'));
+          let file=state.getActiveFile();
+          fs.downloadFile(file.name,file.content,document.getElementById('download-link'));
       }
      
 

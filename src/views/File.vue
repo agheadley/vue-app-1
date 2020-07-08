@@ -25,6 +25,8 @@
   import FileUpload from '../components/FileUpload.vue'
   import FileDownload from '../components/FileDownload.vue'
 
+  import * as state from './../scripts/state'
+
   export default {
     name: 'File',
     components: {
@@ -35,6 +37,9 @@
       return {
       message:'Hello from file ...'
       }
+    },
+    created() {
+        state.setActiveFile("y.txt","user content here ...")
     },
     methods: {
       onClickGo() {

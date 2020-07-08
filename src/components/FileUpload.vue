@@ -30,8 +30,10 @@ export default {
       onSelect(){
           this.file=this.$refs.file.files[0];
           console.log(this.file);
-          fs.readFile(this.file);
-          fs.writeFile('test.txt','blah, blah, blah!');
+          fs.readFile(this.file,data=>{
+              fs.writeFile(this.file.name,data);
+          });
+          
       },
      
 
