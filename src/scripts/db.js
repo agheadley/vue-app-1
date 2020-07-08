@@ -1,11 +1,13 @@
 let MongoClient = window.require("mongodb").MongoClient;
 
-let uri ="mongodb+srv://r1:HBMgtE5IcLqFNIWa@clusteragh-efax4.mongodb.net/test?retryWrites=true";
+import * as uri from './key'
+//let uri ="mongodb+srv://r1:HBMgtE5IcLqFNIWa@clusteragh-efax4.mongodb.net/test?retryWrites=true";
+
 
 
 function getData(callback) {
     MongoClient.connect(
-        uri,
+        uri.getURI(),
         function(err, client) {
           const collection = client.db("atlasTest").collection("xyz");
           collection.find({}).toArray(function(err, result) {
