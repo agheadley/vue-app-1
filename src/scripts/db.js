@@ -1,7 +1,6 @@
 let MongoClient = window.require("mongodb").MongoClient;
 
 import * as uri from './key'
-//let uri ="mongodb+srv://r1:HBMgtE5IcLqFNIWa@clusteragh-efax4.mongodb.net/test?retryWrites=true";
 
 
 
